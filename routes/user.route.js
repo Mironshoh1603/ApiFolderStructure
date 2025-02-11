@@ -1,5 +1,9 @@
 let express = require("express");
-const { getAllUsers, getUserById } = require("../controllers/user.controller");
+const {
+  getAllUsers,
+  getUserById,
+  updateUserDataById,
+} = require("../controllers/user.controller");
 let router = express.Router();
 
 router.get("/", getAllUsers);
@@ -11,5 +15,5 @@ router.post("/", (req, res, next) => {
 });
 
 router.get("/:id", getUserById);
-
+router.put("/:id", updateUserDataById);
 module.exports = router;
