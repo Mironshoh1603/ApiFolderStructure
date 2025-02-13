@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "c69a04a9-4a1d-4175-bbb0-e0f8d0dcf1bb",
+		"name": "UserCrud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17912224",
+		"_collection_link": "https://interstellar-satellite-227372.postman.co/workspace/New-Team-Workspace~bb76982e-fc50-4a0f-9077-b1ce3bff6d8c/collection/17912224-c69a04a9-4a1d-4175-bbb0-e0f8d0dcf1bb?action=share&source=collection_link&creator=17912224"
+	},
+	"item": [
+		{
+			"name": "Get all Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7777/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Najot\", \"age\":4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7777/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7777/user/123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"user",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update User By Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Najot\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7777/user/123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"user",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dele User By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7777/user/123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"user",
+						"123"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
