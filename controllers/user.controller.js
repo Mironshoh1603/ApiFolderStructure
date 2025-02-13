@@ -31,12 +31,15 @@ let updateUserDataById = (req, res, next) => {
 };
 
 let addUser = (req, res, next) => {
-  let { name, age } = req.body; // -45 96  141
-  if (!name || !age) throw new Error("Foydanuvci ma'lumotlari to'gri kirit");
+  let { name, lastname, email } = req.body; // -45 96  141
+  console.log(req.body);
+  if (!name || !email || !lastname)
+    throw new Error("Foydanuvci ma'lumotlari to'gri kirit");
   let user = {
     id: Math.floor(Math.random() * 100 + 100),
     name,
-    age,
+    lastname,
+    email,
   };
   let users = readUserFile();
   users.push(user);

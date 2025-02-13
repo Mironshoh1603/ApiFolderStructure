@@ -6,6 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
 
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700"
@@ -17,6 +18,27 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <style>
+      .add-data {
+        display: flex;
+        justify-content: center;
+      }
+      .input {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin: 20px;
+        align-items: center;
+        align-content: center;
+      }
+      .addDataform {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 40px;
+        background-color: rgb(136, 159, 198);
+      }
+    </style>
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -42,6 +64,7 @@
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Email Address</th>
+                    <th>Buttons</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -51,6 +74,11 @@
                     <td><%= user.name %></td>
                     <td><%= user.lastname %></td>
                     <td><%= user.email %></td>
+                    <td>
+                      <button type="button" class="delete" id="<%= user.id %>">
+                        Ochirish
+                      </button>
+                    </td>
                   </tr>
                   <% } %>
                 </tbody>
@@ -60,5 +88,24 @@
         </div>
       </div>
     </section>
+    <div class="add-data">
+      <form class="addDataform">
+        <h1>User qo'shish</h1>
+        <div class="input">
+          <label for="name">Ismi</label>
+          <input id="name" type="text" name="name" />
+        </div>
+        <div class="input">
+          <label for="lastname">Familiya</label>
+          <input id="lastname" type="text" name="lastname" />
+        </div>
+        <div class="input">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" />
+        </div>
+        <button id="btn" type="submit">Qo'shish</button>
+      </form>
+    </div>
   </body>
+  <script src="/js/main.js"></script>
 </html>
